@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+    body {
+      font-family: 'Raleway', sans-serif;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100">
+  <header class="bg-purple-700 p-4 text-white">
+    <h1 class="text-left text-3xl">Todo List</h1>
+  </header>
+
+  <div class="flex flex-col items-center mt-4">
+    <div class="w-full max-w-4xl bg-white rounded-lg shadow-lg p-6 mb-6">
+      <h2 class="text-center text-xl mb-4">Tambah yang harus dilakukan</h2>
+      <form class="space-y-4" action="#" id="form">
+        <div class="form-group">
+          <label for="title" class="text-lg">Masukkan hal yang akan dilakukan</label>
+          <input type="text" id="title" name="title" required class="w-full p-4 border-2 border-purple-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500">
+        </div>
+        <div class="form-group">
+          <label for="date" class="text-lg">Masukkan tanggal harus selesai</label>
+          <input type="date" id="date" name="date" required class="w-full p-4 border-2 border-purple-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500">
+        </div>
+        <input type="submit" value="Submit" class="btn-submit bg-purple-700 text-white p-3 rounded-lg hover:bg-purple-800 cursor-pointer">
+      </form>
+    </div>
+
+    <div class="w-full max-w-4xl bg-white rounded-lg shadow-lg p-6 mb-6">
+      <h2 class="text-xl mb-4">Yang harus dilakukan</h2>
+      <div id="todos" class="space-y-4">
+        <!-- List items will be inserted here -->
+      </div>
+    </div>
+
+    <div class="w-full max-w-4xl bg-white rounded-lg shadow-lg p-6">
+      <h2 class="text-xl mb-4">Yang sudah dilakukan</h2>
+      <div id="completed-todos" class="space-y-4">
+        <!-- Completed items will be inserted here -->
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
