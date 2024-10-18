@@ -64,9 +64,9 @@ function makeTodo(todoObject) {
     container.setAttribute('id', `todo-${todoObject.id}`);
 
     if (todoObject.isCompleted) {
-        // Wrapper untuk undo dan trash button
+        
         const buttonContainer = document.createElement('div');
-        buttonContainer.classList.add('flex', 'gap-2'); // Flexbox dengan jarak antar tombol
+        buttonContainer.classList.add('flex', 'gap-2'); 
 
         const undoButton = document.createElement('button');
         undoButton.classList.add('undo-button', 'bg-gray-200', 'rounded-full', 'w-10', 'h-10', 'flex', 'items-center', 'justify-center', 'hover:bg-gray-300');
@@ -84,8 +84,8 @@ function makeTodo(todoObject) {
             removeTaskFromCompleted(todoObject.id);
         });
 
-        buttonContainer.append(undoButton, trashButton); // Tambahkan tombol ke container
-        container.append(buttonContainer); // Tambahkan container tombol ke elemen utama
+        buttonContainer.append(undoButton, trashButton); 
+        container.append(buttonContainer); git
     } else {
         const checkButton = document.createElement('button');
         checkButton.classList.add('check-button', 'bg-green-500', 'text-white', 'rounded-full', 'w-10', 'h-10', 'flex', 'items-center', 'justify-center', 'hover:bg-green-600');
